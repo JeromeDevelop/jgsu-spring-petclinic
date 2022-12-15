@@ -36,7 +36,7 @@ class ValidatorTests {
 
 	private Validator createValidator() {
 		LocalValidatorFactoryBean localValidatorFactoryBean = new LocalValidatorFactoryBean();
-		localValidatorFactoryBean.afterPropertiesSet();	
+		localValidatorFactoryBean.afterPropertiesSet();
 		return localValidatorFactoryBean;
 	}
 
@@ -45,7 +45,7 @@ class ValidatorTests {
 
 		LocaleContextHolder.setLocale(Locale.ENGLISH);
 		Person person = new Person();
-		person.setFirstName("Jeromeee");
+		person.setFirstName("notEmpty");
 		person.setLastName("smith");
 
 		Validator validator = createValidator();
